@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import { lusitana } from '@/app/ui/fonts';
+import { Inter } from 'next/font/google';
 import Search from '@/app/ui/search';
 import {
   CustomersTableType,
   FormattedCustomersTable,
 } from '@/app/lib/definitions';
+import { inter } from '../fonts';
 
 export default async function CustomersTable({
   customers,
@@ -13,7 +14,7 @@ export default async function CustomersTable({
 }) {
   return (
     <div className="w-full">
-      <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
+      <h1 className={`${inter.className} mb-8 text-xl md:text-2xl`}>
         Customers
       </h1>
       <Search placeholder="Search customers..." />
